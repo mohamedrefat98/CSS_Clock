@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --black: black;
+}
+
+/* clock design */
+.clock-outer{
+    width: 350px;
+    height: 350px;
+    padding: 20px;
+    margin: 200px auto;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid black;
+    position: relative;
+    z-index: 1;
+  }
+  .center{
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: black;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+  }
+  .hours{
+      position: absolute;
+      height: 25px;
+      background-color: gray;
+      width: 3px;
+    }
+    .hours.big{
+    height: 30px;
+    width: 6px;
+    border: 0;
+  }
+  .twelve{
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  .three{
+    top: 130px;
+    right: 11px;
+    transform: rotate(90deg);
+  }
+  .six{
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .nine{
+    top: 130px;
+    left: 11px;
+    transform: rotate(90deg);
+  }
+
+  .one{
+    top: 23px;
+    right: 70px;
+    transform: rotate(30deg);
+  }
+  .tow{
+    top: 71px;
+    right: 26px;
+    transform: rotate(60deg);
+  }
+  .four{
+    top: 198px;
+    right: 28px;
+    transform: rotate(120deg);
+  }
+  .five{
+    top: 246px;
+    right: 74px;
+    transform: rotate(150deg);
+  }
+  .seven{
+    top: 246px;
+    left: 74px;
+    transform: rotate(210deg);
+  }
+  .eight{
+    top: 198px;
+    left: 28px;
+    transform: rotate(240deg);
+  }
+  .ten{
+    top: 71px;
+    left: 26px;
+    transform: rotate(300deg);
+  }
+  .eleven{
+    top: 23px;
+    left: 70px;
+    transform: rotate(330deg);
+  }
+  /* clock functionalty */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+.second{
+    position:absolute;
+    background-color: rgb(255, 89, 89);
+    height: 120px;
+    width: 2px;
+    left: 50%;
+    top: 50%;
+    z-index: 5;
+    transform: translateX(-50%);
+    transform-origin: top;
+    animation: rotate 60s infinite linear;
+}
+
+.minute{
+    position:absolute;
+    background-color: black;
+    border-radius: 1px;
+    height: 100px;
+    width: 4px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    transform-origin: top;
+    animation: rotate 3600s infinite linear;
+}
+.hour{
+    position:absolute;
+    background-color: black;
+    border-radius: 2px;
+    height: 80px;
+    width: 6px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    transform-origin: top;
+    animation: rotate 216000s infinite linear;
+}
